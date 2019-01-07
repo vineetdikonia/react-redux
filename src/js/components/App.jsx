@@ -7,15 +7,15 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Layout from "./Layout";
 const App = () => (
+  <Router>  
   <Layout>
-    <Router>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/topic" component={Topic} />
       </Switch>
-    </Router>
-  </Layout>
+   </Layout>
+  </Router>
 );
 
 const Home = () => <h2>Home</h2>;

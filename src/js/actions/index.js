@@ -1,4 +1,5 @@
-import { ADD_ARTICLE, DATA_LOADED } from "../constants/action-types";
+import { ADD_ARTICLE, DATA_LOADED, FETCH_MASTER } from "../constants/action-types";
+import axios from 'axios';
 
 export function addArticle(payload) {
     return { type: ADD_ARTICLE, payload }
@@ -11,5 +12,25 @@ export function getData() {
             .then(json => {
                 dispatch({type: DATA_LOADED, payload: json });
             });
+    };
+}
+
+export function getMaster(type) {
+    return function(dispatch){
+        axios.get('/api/get-master?type=' + type, {
+            responseType: 'json',
+        }).then(res => {
+            dispatch({ type: FETCH_MASTER, payload: res.data });
+        });
+    };
+}
+
+export function createMaster(Masterdata) {
+    return dispatch => {
+        axios.post('/api/submit-master', Masterdata).then(response => {
+            dispatch(getMaster(Masterdata.type));
+        }).catch(() => {
+           console.log("error");
+        });
     };
 }

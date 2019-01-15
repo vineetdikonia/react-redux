@@ -1,26 +1,11 @@
-import { ADD_ARTICLE, FOUND_BAD_WORD, DATA_LOADED } from "../constants/action-types";
+import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
 
-const initialState = {
-    articles: [],
-    remoteArticles: []
-};
+import { getMaster } from './masterReducer.js';
 
-function rootReducer(state = initialState, action) {
-    if(action.type === ADD_ARTICLE){
-        return Object.assign({}, state, {
-            articles: state.articles.concat(action.payload)
-        });
-    }
-    if(action.type === FOUND_BAD_WORD){
-        console.log('Badddddddddd');
-    }
-    if(action.type === DATA_LOADED){
-        return Object.assign({}, state, {
-            remoteArticles: state.remoteArticles.concat(action.payload)
-        });
-    }
-
-    return state;
-}
+const rootReducer = combineReducers({
+    form: formReducer,
+    getMaster
+});
 
 export default rootReducer;

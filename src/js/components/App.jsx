@@ -5,20 +5,28 @@
  */
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import { Provider } from 'react-redux';
+import { reducer as formReducer } from 'redux-form';
 import Layout from "./Layout";
+import '../../styles/assets/vendors/base/vendors.bundle.css';
+import '../../styles/assets/demo/demo12/base/style.bundle.css';
+import '../../styles/assets/vendors/custom/fullcalendar/fullcalendar.bundle.css';
+import '../../styles/assets/demo/demo12/base/style.css';
+import Routes from "./Routes.js";
+import rootReducer from "../reducers";
+
+const store = createStore(rootReducer, {}, applyMiddleware(thunk));
+
 const App = () => (
-  <Router>  
-  <Layout>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/topic" component={Topic} />
-      </Switch>
-   </Layout>
-  </Router>
+  <Provider store={store}>
+    <Router>  
+    <Layout>
+      <Routes />
+    </Layout>
+    </Router>
+  </Provider> 
 );
 
-const Home = () => <h2>Home</h2>;
-const About = () => <h2>About</h2>;
-const Topic = () => <h3>Requested Param</h3>;
 export default App;

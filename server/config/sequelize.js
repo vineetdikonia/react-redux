@@ -2,5 +2,5 @@ const db = require('../models');
 
 module.exports = () => {
   const { sequelize } = db;
-  return sequelize.sync({ force: false });
+  return sequelize.sync({ alter: true, force: false });
 };

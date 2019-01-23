@@ -1,6 +1,10 @@
+const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require('path');
 module.exports = {
+  resolve: {
+    extensions: ['*', '.js', '.jsx', '.json']
+  },
   devServer: {
     historyApiFallback: true,
     port: 8080,
@@ -44,6 +48,11 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
+    }),
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      jquery: 'jquery'
     })
   ]
 };

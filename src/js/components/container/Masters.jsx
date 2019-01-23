@@ -98,38 +98,45 @@ class Masters extends Component {
             </div>
           </div>
         </div>
-        <div className="m-content">
-          <div className="row">
-            <div className="col-md-12">
-              <div className="m-portlet m-portlet--tab">
-                <div className="m-form m-form--fit m-form--label-align-right">
-                  <div className="d-flex align-items-center p-t-20 m-b-30">
-                    <div className="mr-auto">
+        <div className="m-grid__item m-grid__item--fluid m-wrapper">
+          <div className="m-content">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="m-portlet m-portlet--tab">
+                  <div className="inline-filter-bar m-b-15">
+                    <div className="d-flex align-items-center">
+                      <div className="mr-auto">
+                        <h3 className="m-subheader__title "></h3>
+                      </div>
+                      <div className="m-l-30">
+                        <div className="m-portlet__head-tools text-right">
+                          <button className="m-badge" data-toggle="modal" data-target="#m_modal_10"><i className="la la-plus"></i>Add {master_type}</button>
+                                </div>
+                        </div>
+                      </div>
                     </div>
-                    <button type="button" className="btn m-btn--pill btn-info m-btn--wide" data-toggle="modal" data-target="#m_modal_10"><i className="la la-plus"></i> Add {master_type}</button>
+                    <form className="m-form m-form--fit m-form--label-align-right p-l-r-0">
+                      <div className="table-responsive">
+                        <div className="m-section__content">
+                          <table className="table">
+                            <thead>
+                              <tr>
+                                <th>Sr. No.</th>
+                                <th>Title</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {tableData}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </form>
                   </div>
                 </div>
-                <form className="m-form m-form--fit m-form--label-align-right p-l-r-0">
-                  <div className="table-responsive">
-                    <div className="m-section__content work-request-table">
-                      <table className="table">
-                        <thead>
-                          <tr>
-                            <th>Sr. No.</th>
-                            <th>Title</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {tableData}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </form>
               </div>
             </div>
           </div>
-        </div>
         <MasterPopup onSubmit={this.AddMaster} title={this.state.master} />
       </div>
     )

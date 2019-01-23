@@ -1,27 +1,25 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { connect } from 'react-redux';
-import { getCrews} from "../../actions/index";
+import { getClient } from "../../actions/clients";
 
-class Crew extends Component {
+
+class Clients extends Component {
     constructor(props) {
         super(props);
     }
     componentDidMount() {
-        this.props.getCrews();
+        this.props.getClient();
     }
     render() {
-        const tableData = this.props.crews_data.map((function (table, i) {
-            return <tr className='clickable-row' data-href='sample-crew.html' key={i}>
-                    <td>{table.first_name+' '+table.last_name}</td>
-                    <td>{table.email}</td>
-                    <td>{table.role}</td>
-                    <td>Contrary to popular</td>
-                    <td>{'$ ' +table.hourly_rate}</td>
-                    <td>42</td>
-                    <td>Completed</td>
-
-                </tr>
+        const tableData = this.props.client_data.map((function (table, i) {
+            return <tr className='clickable-row' data-href='sample-client.html' key={i}>
+                <td>{table.name}</td>
+                <td>2</td>
+                <td>4</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
         }));
         return (
             <div className="m-grid__item m-grid__item--fluid m-wrapper">
@@ -29,14 +27,15 @@ class Crew extends Component {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="m-portlet m-portlet--tab">
-                                <div className="inline-filter-bar m-b-20">
+                                <div className="inline-filter-bar m-b-15">
                                     <div className="d-flex align-items-center">
                                         <div className="mr-auto">
                                             <h3 className="m-subheader__title "></h3>
                                         </div>
                                         <div className="m-l-30">
                                             <div className="m-portlet__head-tools text-right">
-                                            <Link to="/add_crew" className="m-badge"><i className="la la-plus"></i>Add Crew</Link>
+                                                <Link to="/add_building" className="m-badge m-r-10"><i className="la la-plus"></i>Add Building</Link>
+                                                <Link to="/add_client" className="m-badge"><i className="la la-plus"></i>Add Client</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -47,13 +46,11 @@ class Crew extends Component {
                                             <table className="table">
                                                 <thead>
                                                     <tr>
-                                                        <th>User Name</th>
-                                                        <th>Email</th>
-                                                        <th>Position</th>
-                                                        <th>Active Projects</th>
-                                                        <th>Hourly Rate</th>
-                                                        <th>Hours Worked This Month</th>
-                                                        <th>Status</th>
+                                                        <th>Client Name</th>
+                                                        <th>Building Locations</th>
+                                                        <th>Active Jobs</th>
+                                                        <th>Unpaid Invoices</th>
+                                                        <th>Unapproved Proposals</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -72,12 +69,13 @@ class Crew extends Component {
     }
 }
 
-const mapDispatchToProps = { getCrews };
+
+const mapDispatchToProps = { getClient };
 
 function mapStateToProps(state) {
     return {
-        crews_data: state.getCrews.crews_data
+        client_data: state.getClients.client_data
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Crew);
+export default connect(mapStateToProps, mapDispatchToProps)(Clients);

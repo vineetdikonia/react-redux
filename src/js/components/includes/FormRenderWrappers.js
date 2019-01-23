@@ -17,7 +17,7 @@ export const renderDatePicker = ({ input, className, label, dateFormat, meta: { 
 
 export const renderField = ({ input, className, label, id,  value, type, style, meta: { touched, error, warning } }) => (
     <div>
-        <input className={className} {...input} placeholder={label} type={type} style={style}/>
+        <input className={className} {...input} placeholder={label} type={type} style={style} />
         {touched && ((error && <span style={{ "color": "red" }}><i className="fa fa-exclamation" /> {error}</span>) || (warning &&
             <span>{warning}</span>))}
     </div>

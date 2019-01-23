@@ -6,6 +6,9 @@ import WorkRequest from './container/WorkRequest.jsx';
 import Masters from './container/Masters.jsx';
 import Crew from './container/Crew.jsx';
 import AddCrew from './container/AddCrew.jsx';
+import Clients from './container/Clients.jsx';
+import AddClient from './container/AddClient.jsx';
+import AddBuilding from './container/AddBuilding.jsx';
 
 const Routes = () => (
     <Switch>
@@ -15,6 +18,9 @@ const Routes = () => (
         <Route path="/masters/:types(category|location)" component={Masters} />
         <Route path="/crew" component={Crew} />
         <Route path="/add_crew" component={AddCrew} />
+        <Route path="/clients" component={Clients} />
+        <Route path="/add_client" component={AddClient} />
+        <Route path="/add_building" component={AddBuilding} />
     </Switch>
 );
 

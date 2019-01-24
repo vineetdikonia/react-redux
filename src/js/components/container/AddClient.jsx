@@ -6,7 +6,6 @@ import { Field, reduxForm, reset } from 'redux-form'
 import moment from 'moment';
 import uuidv from "uuid";
 import { getClient, createClient } from "../../actions/clients";
-import dummy from "../../../styles/assets/demo/demo12/media/img/dummy.jpg";
 
 
 let Client = props => {
@@ -57,7 +56,7 @@ let Client = props => {
                                         <div className="col-md-4">
                                             <div className="form-group m-form__group text-center">
                                                 <label htmlFor="exampleInputEmail1">Client Logo</label>
-                                                <div className="client-dp"><img alt="" src={dummy} /></div>
+                                                <div className="client-dp"><img alt="" src="https://s3.us-east-2.amazonaws.com/caterpillarcdn-production/test/dummy.jpg" /></div>
                                                 <div className="drag-blocks">
                                                     <span className="select-file">
                                                         <input id="" name="" accept="" type="file" />Change Picture</span>

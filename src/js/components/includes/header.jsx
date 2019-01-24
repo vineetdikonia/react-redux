@@ -1,14 +1,4 @@
 import React from "react";
-
-import logo from "../../../styles/assets/demo/demo12/media/img/logo/logo_new.jpg";
-import flag20 from "../../../styles/assets/app/media/img/flags/020-flag.svg";
-import flag15 from "../../../styles/assets/app/media/img/flags/015-china.svg";
-import flag16 from "../../../styles/assets/app/media/img/flags/016-spain.svg";
-import flag14 from "../../../styles/assets/app/media/img/flags/014-japan.svg";
-import flag17 from "../../../styles/assets/app/media/img/flags/017-germany.svg";
-import user4 from "../../../styles/assets/app/media/img/users/user4.jpg";
-import quick_actions_bg from "../../../styles/assets/app/media/img/misc/quick_actions_bg.jpg";
-
 const Header = () => (
     <header id="m_header" className="m-grid__item    m-header " m-minimize-offset="200" m-minimize-mobile-offset="200">
         <div className="m-container m-container--fluid m-container--full-height">
@@ -17,7 +7,7 @@ const Header = () => (
                     <div className="m-stack m-stack--ver m-stack--general">
                         <div className="m-stack__item m-stack__item--middle m-brand__logo">
                             <a href="index.html" className="m-brand__logo-wrapper">
-                                <img alt="" src={logo} />
+                                <img alt="" src="https://s3.us-east-2.amazonaws.com/caterpillarcdn-production/test/logo_new.jpg" />
                             </a>
                         </div>
                         <div className="m-stack__item m-stack__item--middle m-brand__tools">
@@ -219,13 +209,13 @@ const Header = () => (
                                     <li className="m-nav__item m-topbar__languages m-dropdown m-dropdown--small m-dropdown--header-bg-fill m-dropdown--arrow m-dropdown--align-right m-dropdown--mobile-full-width language-select language-select" m-dropdown-toggle="click">
                                         <a href="#" className="m-nav__link m-dropdown__toggle">
                                             <span className="m-nav__link-text">
-                                                <img className="m-topbar__language-selected-img" src={flag20} />
+                                                <img className="m-topbar__language-selected-img" src="https://s3.us-east-2.amazonaws.com/caterpillarcdn-production/test/020-flag.svg" />
                                             </span>
                                         </a>
                                         <div className="m-dropdown__wrapper">
                                             <span className="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
                                             <div className="m-dropdown__inner">
-                                                <div className="m-dropdown__header m--align-center" style={{ 'backgroundImage': `url(${quick_actions_bg})`, 'backgroundSize': 'cover' }}>
+                                                <div className="m-dropdown__header m--align-center" style={{ 'backgroundImage': `url(https://s3.us-east-2.amazonaws.com/caterpillarcdn-production/test/quick_actions_bg.jpg)`, 'backgroundSize': 'cover' }}>
                                                     <span className="m-dropdown__header-subtitle">Select your language</span>
                                                 </div>
                                                 <div className="m-dropdown__body">
@@ -233,31 +223,31 @@ const Header = () => (
                                                         <ul className="m-nav m-nav--skin-light">
                                                             <li className="m-nav__item m-nav__item--active">
                                                                 <a href="#" className="m-nav__link m-nav__link--active">
-                                                                    <span className="m-nav__link-icon"><img className="m-topbar__language-img" src={flag20} /></span>
+                                                                    <span className="m-nav__link-icon"><img className="m-topbar__language-img" src="https://s3.us-east-2.amazonaws.com/caterpillarcdn-production/test/020-flag.svg" /></span>
                                                                     <span className="m-nav__link-title m-topbar__language-text m-nav__link-text">USA</span>
                                                                 </a>
                                                             </li>
                                                             <li className="m-nav__item">
                                                                 <a href="#" className="m-nav__link">
-                                                                    <span className="m-nav__link-icon"><img className="m-topbar__language-img" src={flag15} /></span>
+                                                                    <span className="m-nav__link-icon"><img className="m-topbar__language-img" src="https://s3.us-east-2.amazonaws.com/caterpillarcdn-production/test/015-china.svg" /></span>
                                                                     <span className="m-nav__link-title m-topbar__language-text m-nav__link-text">China</span>
                                                                 </a>
                                                             </li>
                                                             <li className="m-nav__item">
                                                                 <a href="#" className="m-nav__link">
-                                                                    <span className="m-nav__link-icon"><img className="m-topbar__language-img" src={flag16} /></span>
+                                                                    <span className="m-nav__link-icon"><img className="m-topbar__language-img" src="https://s3.us-east-2.amazonaws.com/caterpillarcdn-production/test/016-spain.svg" /></span>
                                                                     <span className="m-nav__link-title m-topbar__language-text m-nav__link-text">Spain</span>
                                                                 </a>
                                                             </li>
                                                             <li className="m-nav__item">
                                                                 <a href="#" className="m-nav__link">
-                                                                    <span className="m-nav__link-icon"><img className="m-topbar__language-img" src={flag14} /></span>
+                                                                    <span className="m-nav__link-icon"><img className="m-topbar__language-img" src="https://s3.us-east-2.amazonaws.com/caterpillarcdn-production/test/014-japan.svg" /></span>
                                                                     <span className="m-nav__link-title m-topbar__language-text m-nav__link-text">Japan</span>
                                                                 </a>
                                                             </li>
                                                             <li className="m-nav__item">
                                                                 <a href="#" className="m-nav__link">
-                                                                    <span className="m-nav__link-icon"><img className="m-topbar__language-img" src={flag17} /></span>
+                                                                    <span className="m-nav__link-icon"><img className="m-topbar__language-img" src="https://s3.us-east-2.amazonaws.com/caterpillarcdn-production/test/017-germany.svg" /></span>
                                                                     <span className="m-nav__link-title m-topbar__language-text m-nav__link-text">Germany</span>
                                                                 </a>
                                                             </li>
@@ -270,7 +260,7 @@ const Header = () => (
                                     <li className="m-nav__item m-topbar__user-profile  m-dropdown m-dropdown--medium m-dropdown--arrow  m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light" m-dropdown-toggle="click">
                                         <a href="#" className="m-nav__link m-dropdown__toggle">
                                             <span className="m-topbar__userpic">
-                                                <img src={user4} className="m--img-rounded m--marginless m--img-centered" alt="" />
+                                                <img src="https://s3.us-east-2.amazonaws.com/caterpillarcdn-production/test/user4.jpg" className="m--img-rounded m--marginless m--img-centered" alt="" />
                                             </span>
                                             <span className="m-nav__link-icon m-topbar__usericon  m--hide">
                                                 <span className="m-nav__link-icon-wrapper"><i className="flaticon-user-ok"></i></span>
@@ -283,7 +273,7 @@ const Header = () => (
                                                 <div className="m-dropdown__header m--align-center">
                                                     <div className="m-card-user m-card-user--skin-light">
                                                         <div className="m-card-user__pic">
-                                                            <img src={user4} className="m--img-rounded m--marginless" alt="" />
+                                                            <img src="https://s3.us-east-2.amazonaws.com/caterpillarcdn-production/test/user4.jpg" className="m--img-rounded m--marginless" alt="" />
                                                         </div>
                                                         <div className="m-card-user__details">
                                                             <span className="m-card-user__name m--font-weight-500">Mark Andre</span>

@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "postgres",
-    "password": "welcome",
-    "database": "postgres",
+    "password": "Welcome@123#@!",
+    "database": "termstack",
     "host": "127.0.0.1",
     "dialect": "postgres",
     "logging": false
@@ -17,8 +17,8 @@
   },
   "production": {
     "username": "postgres",
-    "password": "welcome",
-    "database": "postgres",
+    "password": "Welcome@123#@!",
+    "database": "termstack",
     "host": "127.0.0.1",
     "dialect": "postgres",
     "logging": false
